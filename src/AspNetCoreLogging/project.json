@@ -1,0 +1,26 @@
+﻿{
+  "version": "1.0.0-*",
+  "language": "English",
+  "authors": [ "Darryn Patterson" ],
+  "copyright": "Copyright 2016",
+  "title": "AspNetCoreLogging",
+  "description": "AspNetCoreLogging is an ASP.NET Core solution which facilitates logging application information.",
+  "projectUrl": "https://github.com/DarrynPatterson/AspNetCoreLogging",
+  "packOptions": {
+    "licenseUrl": "https://github.com/DarrynPatterson/AspNetCoreLogging/blob/master/LICENSE",
+    "tags": [ "Logging" ],
+    "owners": [ "Darryn Patterson" ],
+    "summary": "AspNetCoreLogging facilitates logging application information.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DarrynPatterson/AspNetCoreLogging"
+    }
+  },
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Microsoft.Extensions.Logging.Abstractions": "1.0.0"
+  },
+  "frameworks": {
+    "net461": {}
+  }
+}

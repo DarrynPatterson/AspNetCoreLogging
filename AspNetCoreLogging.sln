@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F7F2D929-9711-415A-A601-D7982B285309}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B25CBE2-0F88-4E6B-9542-BF136EA8DDB2}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreLogging", "src\AspNetCoreLogging\AspNetCoreLogging.xproj", "{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DAA8AF27-3BA6-4FBF-B8DD-B91FFB08BF80} = {F7F2D929-9711-415A-A601-D7982B285309}
+	EndGlobalSection
+EndGlobal
