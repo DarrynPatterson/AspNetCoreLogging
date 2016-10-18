@@ -1,5 +1,6 @@
 ﻿using AspNetCoreLogging.Logging.AppendBlob;
 using AspNetCoreLogging.Logging.DebugOutput;
+using AspNetCoreLogging.Logging.MongoCollection;
 using Microsoft.Extensions.Logging;
 
 namespace AspNetCoreLogging
@@ -20,6 +21,20 @@ namespace AspNetCoreLogging
             LogLevel minimumLevel)
         {
             factory.AddProvider(new DebugLoggerProvider(minimumLevel));
+            return factory;
+        }
+
+        public static ILoggerFactory AddMongoCollection(
+            this ILoggerFactory factory,
+            string userName,
+            string password,
+            string host,
+            int port,
+            string database,
+            string collection,
+            LogLevel minimumLevel)
+        {
+            factory.AddProvider(new MongoCollectionLoggerProvider(userName, password, host, port, database, collection, minimumLevel));
             return factory;
         }
     }

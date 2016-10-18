@@ -1,0 +1,10 @@
+﻿{
+  "Logging": {
+    "MongoUserName": "xxxxx",
+    "MongoPassword": "xxxxx",
+    "MongoHost": "xxxxx.mlab.com",
+    "MongoPort": 12345,
+    "MongoDatabase": "xxxxx",
+    "MongoCollection": "logs"
+  }
+}
