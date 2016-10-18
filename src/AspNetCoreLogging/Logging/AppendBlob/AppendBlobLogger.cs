@@ -38,12 +38,12 @@ namespace AspNetCoreLogging.Logging.AppendBlob
 
         public CloudBlobContainer Container { get; }
 
-        public string LoggerName { get; }
+        public string CategoryName { get; }
 
-        public AppendBlobLogger(string connectionString, LogLevel minimumLevel, string name)
+        public AppendBlobLogger(string connectionString, LogLevel minimumLevel, string categoryName)
         {
             MinimumLevel = minimumLevel;
-            LoggerName = name;
+            CategoryName = categoryName;
 
             try
             {
@@ -78,7 +78,7 @@ namespace AspNetCoreLogging.Logging.AppendBlob
 
             var task = Task.Factory.StartNew(() =>
             {
-                var entry = String.Format("[{0}]\t{1}\t{2}\t{3}\t{4}" + Environment.NewLine, DateTime.UtcNow.ToString("o"), logLevel.ToString(), LoggerName, state.ToString(), exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : String.Empty);
+                var entry = String.Format("[{0}]\t{1}\t{2}\t{3}\t{4}" + Environment.NewLine, DateTime.UtcNow.ToString("o"), logLevel.ToString(), CategoryName, state.ToString(), exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : String.Empty);
 
                 if (!AppendBlob.Exists())
                 {

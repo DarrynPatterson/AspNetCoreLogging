@@ -11,7 +11,7 @@ namespace AspNetCoreLogging.Logging.DebugOutput
             MinimumLevel = minimumLevel;
         }
 
-        public ILogger CreateLogger(string name)
+        public ILogger CreateLogger(string categoryName)
         {
             return new DebugLogger(MinimumLevel);
         }

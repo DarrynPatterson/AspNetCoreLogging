@@ -14,9 +14,9 @@ namespace AspNetCoreLogging.Logging.AppendBlob
             MinimumLevel = minimumLevel;
         }
 
-        public ILogger CreateLogger(string name)
+        public ILogger CreateLogger(string categoryName)
         {
-            return new AppendBlobLogger(StorageAccountConnectionString, MinimumLevel, name);
+            return new AppendBlobLogger(StorageAccountConnectionString, MinimumLevel, categoryName);
         }
 
         public void Dispose()
