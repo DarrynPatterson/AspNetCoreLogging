@@ -41,6 +41,7 @@ namespace AspNetCoreLogging.TestClient
 
             loggerFactory.AddDebug(LogLevel.Debug);
 
+            // NB: Update the Mongo connection details in the config.development.json
             loggerFactory.AddMongoCollection(
                 Configuration["Logging:MongoUserName"],
                 Configuration["Logging:MongoPassword"],

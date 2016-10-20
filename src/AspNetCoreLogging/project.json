@@ -4,13 +4,13 @@
   "authors": [ "Darryn Patterson" ],
   "copyright": "Copyright 2016",
   "title": "AspNetCoreLogging",
-  "description": "AspNetCoreLogging is an ASP.NET Core solution which facilitates logging application information.",
+  "description": "AspNetCoreLogging is an ASP.NET logging solution capable of logging application messages to a Mongo Collection, Azure Blob Storage or the Debug Window.",
   "projectUrl": "https://github.com/DarrynPatterson/AspNetCoreLogging",
   "packOptions": {
     "licenseUrl": "https://github.com/DarrynPatterson/AspNetCoreLogging/blob/master/LICENSE",
     "tags": [ "Logging" ],
     "owners": [ "Darryn Patterson" ],
-    "summary": "AspNetCoreLogging facilitates logging application information.",
+    "summary": "AspNetCoreLogging is an ASP.NET logging solution capable of logging application messages to a Mongo Collection, Azure Blob Storage or the Debug Window.",
     "repository": {
       "type": "git",
       "url": "https://github.com/DarrynPatterson/AspNetCoreLogging"
