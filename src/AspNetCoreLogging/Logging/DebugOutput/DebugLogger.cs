@@ -30,7 +30,10 @@ namespace AspNetCoreLogging.Logging.DebugOutput
                 return;
             }
 
-            Debug.WriteLine("[{0}] {1} {2} {3}", DateTime.UtcNow.ToString("o"), logLevel.ToString(), state.ToString(), exception?.ToString());
+            var date = DateTime.UtcNow.ToString("o");
+            var entry = $"[{date}] {logLevel.ToString()} {state.ToString()} {exception?.ToString()}";
+
+            Debug.WriteLine(entry);
         }
     }
 }

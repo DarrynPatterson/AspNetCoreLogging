@@ -50,11 +50,13 @@ namespace AspNetCoreLogging.Logging.MongoCollection
 
             var task = Task.Factory.StartNew(async () =>
             {
-                var entry = String.Format("[{0}]\t{1}\t{2}\t{3}\t{4}" + Environment.NewLine, DateTime.UtcNow.ToString("o"), logLevel.ToString(), CategoryName, state.ToString(), exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : String.Empty);
+                var date = DateTime.UtcNow.ToString("o");
+                var ex = exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : string.Empty;
+                var entry = $"[{date}]\t{logLevel.ToString()}\t{CategoryName}\t{state.ToString()}\t{ex}" + Environment.NewLine;
 
                 try
                 {
-                    await MongoRepository.Insert(new string[] { entry });
+                    await MongoRepository.Insert(entry);
                 }
                 catch (Exception)
                 {

@@ -47,9 +47,10 @@ namespace AspNetCoreLogging.Logging.MongoCollection.Repository
 
         #endregion
 
-        public async Task Insert(IEnumerable<string> entries)
+        public async Task Insert(string entry)
         {
-            await Collection.InsertManyAsync(entries.Select(x => new LogMongoDocument() { Entry = x }));
+            var document = new LogMongoDocument() { Entry = entry };
+            await Collection.InsertOneAsync(document);
         }
     }
 }

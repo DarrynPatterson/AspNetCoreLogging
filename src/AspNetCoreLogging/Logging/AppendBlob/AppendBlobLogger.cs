@@ -30,7 +30,7 @@ namespace AspNetCoreLogging.Logging.AppendBlob
         {
             get
             {
-                return String.Format("{0}{1}", DateTime.UtcNow.ToString("yyyy-MM-dd/yyyy-MM-dd-HH"), ".log");
+                return string.Format("{0}{1}", DateTime.UtcNow.ToString("yyyy-MM-dd/yyyy-MM-dd-HH"), ".log");
             }
         }
 
@@ -78,8 +78,10 @@ namespace AspNetCoreLogging.Logging.AppendBlob
 
             var task = Task.Factory.StartNew(() =>
             {
-                var entry = String.Format("[{0}]\t{1}\t{2}\t{3}\t{4}" + Environment.NewLine, DateTime.UtcNow.ToString("o"), logLevel.ToString(), CategoryName, state.ToString(), exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : String.Empty);
-
+                var date = DateTime.UtcNow.ToString("o");
+                var ex = exception != null ? exception.ToString().Replace(Environment.NewLine, " ") : string.Empty;
+                var entry = $"[{date}]\t{logLevel.ToString()}\t{CategoryName}\t{state.ToString()}\t{ex}" + Environment.NewLine;
+                
                 if (!AppendBlob.Exists())
                 {
                     AppendBlob.CreateOrReplace();
